@@ -25,14 +25,12 @@ after(function(done)
 });
 
 // Delete all data after each test
-afterEach(function(done) 
+afterEach(function(done)
 {
-  /*
-  Grocery.query("DELETE FROM Grocery");
-  HouseAccount.query("DELETE FROM HouseAccount");
-  House.query("DELETE FROM House");
-  Account.query("DELETE FROM Account");
-  */
+  Grocery.query("DELETE FROM Grocery", function(err, result) {});
+  HouseAccount.query("DELETE FROM HouseAccount", function(err, result) {});
+  House.query("DELETE FROM House", function(err, result) {});
+  Account.query("DELETE FROM Account", function(err, result) {});
 
   done();
 });

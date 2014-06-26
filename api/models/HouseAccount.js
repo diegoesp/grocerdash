@@ -16,7 +16,7 @@ module.exports =
   		type: "integer",
   		required: "true"
   	},
-  	userId:
+  	accountId:
   	{
   		type: "integer",
   		required: "true"
