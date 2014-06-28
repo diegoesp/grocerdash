@@ -22,7 +22,7 @@ module.exports.policies = {
 
 		// Apply the `false` policy as the default for all actions
 		// (`false` prevents all access)
-		'*': "isAuthenticated",
+		'*': true
 
 		// For the action `nurture`, apply the 'isRabbitMother' policy 
 		// (this overrides `false` above)
@@ -34,8 +34,6 @@ module.exports.policies = {
 	},
 
 	SessionController: {
-
 		'*': true
-
 	}
 };
