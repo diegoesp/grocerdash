@@ -28,5 +28,4 @@ Factory.prototype.houseAccount = function(house, account)
 	return {name: "Apples", houseId: houseId, accountId: accountId};
 }
 
-
 module.exports = Factory;

@@ -21,5 +21,23 @@ describe('Account', function(done) {
   		should.exist(err);
   		done();
   	});
+  }),
+
+  it ("should login", function(done) 
+  {
+    var accountData = new Factory().account();
+    Account.create(accountData, function(err, account) {
+      account.login(accountData.password).should.be.ok
+      done();
+    });
+  }),
+
+  it ("should not login if password is wrong", function(done) 
+  {
+    var accountData = new Factory().account();
+    Account.create(accountData, function(err, account) {
+      account.login("fake pass").should.not.be.ok
+      done();
+    });
   })
 });

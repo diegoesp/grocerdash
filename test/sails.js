@@ -13,6 +13,9 @@ before(function(done)
     {
     // export properties for upcoming tests with supertest.js
     sails.localAppURL = localAppURL = ( sails.usingSSL ? 'https' : 'http' ) + '://' + sails.config.host + ':' + sails.config.port + '';
+
+    // sails.express.app.use(sails.express.cookieParser());
+    // sails.express.app.use(sails.express.session({ secret: "secreto" }));
     // save reference for teardown function
     done(err);
     });

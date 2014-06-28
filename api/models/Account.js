@@ -29,6 +29,16 @@ module.exports =
   	{
   		type: "string",
   		required: true
-  	}
-  }
+  	},
+
+    // Logs in a user
+    login: function(password)
+    {
+      if (password === this.password)
+        return true;
+      else
+        return false;
+    }
+
+  },
 };
